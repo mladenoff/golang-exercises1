@@ -1,4 +1,9 @@
-00_hello_world/00_hello_world
-01_bubble_sort/01_bubble_sort
-02_kitten_array/02_kitten_array
-03_binary_search_tree/03_binary_search_tree
+src/00_hello_world/00_hello_world
+src/01_bubble_sort/01_bubble_sort
+src/02_kitten_array/02_kitten_array
+src/03_binary_search_tree/03_binary_search_tree
+
+solutions/00_hello_world/00_hello_world
+solutions/01_bubble_sort/01_bubble_sort
+solutions/02_kitten_array/02_kitten_array
+solutions/03_binary_search_tree/03_binary_search_tree
