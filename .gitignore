@@ -3,9 +3,11 @@ src/01_bubble_sort/01_bubble_sort
 src/02_kitten_array/02_kitten_array
 src/03_binary_search_tree/03_binary_search_tree
 src/04_make_change/04_make_change
+src/05_eight_queens/05_eight_queens
 
 solutions/00_hello_world/00_hello_world
 solutions/01_bubble_sort/01_bubble_sort
 solutions/02_kitten_array/02_kitten_array
 solutions/03_binary_search_tree/03_binary_search_tree
 solutions/04_make_change/04_make_change
+solutions/05_eight_queens/05_eight_queens
