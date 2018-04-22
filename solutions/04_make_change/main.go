@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-var COINS = [...]int{30, 14, 6, 2}
+var coins = [...]int{30, 14, 6, 2}
 
 func max(x int, y int) int {
 	if x < y {
@@ -18,7 +18,7 @@ func makeChange(amount int, purse []int, minIdx int) []int {
 
 	var bestPurse []int
 
-	for idx, coin := range COINS {
+	for idx, coin := range coins {
 		if idx < minIdx {
 			continue
 		}
