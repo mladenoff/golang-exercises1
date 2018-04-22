@@ -1,30 +1,25 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math/rand"
+)
 
 type treeNode struct {
-	value string
+	value int
 	left  *treeNode
 	right *treeNode
 }
 
-func insert(root *treeNode, value string) *treeNode {
+func insert(root *treeNode, value int) *treeNode {
 	if root == nil {
 		return &treeNode{value: value}
 	}
 
 	if value < root.value {
-		if root.left == nil {
-			root.left = &treeNode{value: value}
-		} else {
-			insert(root.left, value)
-		}
-	} else {
-		if root.right == nil {
-			root.right = &treeNode{value: value}
-		} else {
-			insert(root.right, value)
-		}
+		root.left = insert(root.left, value)
+	} else if root.value < value {
+		root.right = insert(root.right, value)
 	}
 
 	return root
@@ -35,22 +30,27 @@ func traverse(root *treeNode, fn func(*treeNode)) {
 		return
 	}
 
-	if root.left != nil {
-		traverse(root.left, fn)
-	}
-
+	traverse(root.left, fn)
 	fn(root)
+	traverse(root.right, fn)
+}
 
-	if root.right != nil {
-		traverse(root.right, fn)
+func randomInts(targetLength int) []int {
+	nums := []int{}
+	for len(nums) < targetLength {
+		num := rand.Intn(1000)
+		nums = append(nums, num)
 	}
+
+	return nums
 }
 
 func main() {
 	var root *treeNode
-	root = insert(root, "456")
-	root = insert(root, "123")
-	root = insert(root, "789")
+
+	for _, value := range randomInts(100) {
+		root = insert(root, value)
+	}
 
 	traverse(root, func(node *treeNode) {
 		fmt.Println(node.value)
