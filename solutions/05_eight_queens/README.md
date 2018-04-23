@@ -17,6 +17,9 @@ I wrote a method called `placeQueens(s *state, row int) bool`. This
 tries to place a queen in the row. It iterates through the columns,
 checking if there are any conflicts in the occupied state variables.
 
+You'll have to come up with a formula to decide which "up" and "down"
+diagonals a position lies on.
+
 If not, it tries to place a queen, updating the various occupied
 properties and placing the queen position in queenPositions and
 incrementing `numQueensPlaced`.
