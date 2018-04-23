@@ -4,13 +4,6 @@ import "fmt"
 
 var coins = [...]int{30, 14, 6, 2}
 
-func max(x int, y int) int {
-	if x < y {
-		return y
-	}
-	return x
-}
-
 func makeChange(amount int, purse []int, minIdx int) []int {
 	if amount == 0 {
 		return purse
